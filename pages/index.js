@@ -133,6 +133,8 @@ export default function Home() {
         }
 
         body {
+          margin: 0;
+          padding: 0;
           font-family: 'Mountains of Christmas', cursive;
           color: #ffffff;
           background: #C0392B;
