@@ -1,6 +1,16 @@
 import Head from 'next/head'
 
+function daysUntilChristmas(date){
+  const dayOfTheYear = (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
+  const numberOfDays = new Date().getFullYear() % 4 === 0 ? 366 : 365;
+  
+  return numberOfDays - dayOfTheYear - 6;
+}
+
 export default function Home() {
+  const today = new Date();
+  const background = today.getMonth() == 11 ? "christmas-bg" : "notxmas-bg";
+
   return (
     <div className="container">
       <Head>
@@ -9,26 +19,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <div id="mainwrap" className="col-md-8 col-md-offset-2 text-center">
+        <div id="mainwrap" className={`col-md-8 col-md-offset-2 text-center ${background}`}>
           <img id="xmasimg" src="https://dl.dropboxusercontent.com/s/5uqou2o4ya9agh1/bell-120px.png"/>
-          <div id="sleeps" className="sleep-number">-</div>
+          <div id="sleeps" className="sleep-number">{daysUntilChristmas(today)}</div>
           <div id="text" className="sleep-text">Nuits avant Noël</div>
         </div>
       </main>
 
       <style jsx>{`
-        body {
-          font-family: 'Mountains of Christmas', cursive;
-          color: #ffffff;
-          background: #C0392B;
-          background: repeating-linear-gradient(
-          45deg,
-          #E74C3C,
-          #E74C3C 10px,
-          #C0392B 10px,
-          #C0392B 20px);
-        }
-        
         .christmas-bg {
           background: repeating-linear-gradient(
           45deg,
@@ -103,17 +101,16 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
-        html,
         body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
+          font-family: 'Mountains of Christmas', cursive;
+          color: #ffffff;
+          background: #C0392B;
+          background: repeating-linear-gradient(
+          45deg,
+          #E74C3C,
+          #E74C3C 10px,
+          #C0392B 10px,
+          #C0392B 20px);
         }
       `}</style>
     </div>
