@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
 function daysUntilChristmas(date){
   const dayOfTheYear = (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
@@ -16,6 +17,12 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+            rel="preload"
+            href="/fonts/MountainsofChristmas.ttf"
+            as="font"
+            crossOrigin=""
+          />
       </Head>
 
       <main>
@@ -102,6 +109,12 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+        @font-face {
+          font-family: "Mountains of Christmas";
+          src: url('/fonts/MountainsofChristmas.ttf');
+          font-display: swap;
+        }
+
         body {
           font-family: 'Mountains of Christmas', cursive;
           color: #ffffff;
