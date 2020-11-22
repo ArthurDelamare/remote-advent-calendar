@@ -27,7 +27,7 @@ export default function Home() {
 
       <main>
         <div id="mainwrap" className={`col-md-8 col-md-offset-2 text-center ${background}`}>
-          <img id="xmasimg" src="https://dl.dropboxusercontent.com/s/f9n2w4nfujleve3/rudolph-120px.png"/>
+          <img id="xmasimg" src="/images/rudolph-120px.png"/>
           <div id="sleeps" className="sleep-number">{daysUntilChristmas(today)}</div>
           <div id="text" className="sleep-text">Nuits avant Noël</div>
         </div>
