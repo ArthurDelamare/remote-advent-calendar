@@ -34,6 +34,13 @@ export default function Home() {
       </main>
 
       <style jsx>{`
+        .container {
+          padding-right: 15px;
+          padding-left: 15px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
         .christmas-bg {
           background: repeating-linear-gradient(
           45deg,
@@ -74,6 +81,16 @@ export default function Home() {
         @media (min-width: 768px) {
           .sleep-number {
             font-size: 300px;
+          }
+
+          .container {
+            width: 750px;
+          }
+        }
+
+        @media (min-width: 992px) {
+          .container {
+            width: 970px;
           }
         }
         
