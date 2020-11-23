@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import Card from "../components/card";
 
 function Calendar() {
   const [card, setCard] = useState(false);
-  
+
   useEffect(() => {
     const cardValue = localStorage.getItem("card");
     if (cardValue){
@@ -19,8 +20,20 @@ function Calendar() {
 
   return (
   <div>
-    <div>value: {card.toString()}</div>
-    <button onClick={handleClick}>click me</button>
+    <div className="card">
+      <Card ></Card>
+    </div>
+    
+
+    <style jsx>
+      {
+        `
+        .card {
+          margin: 10px;
+        }
+        `
+      }
+    </style>
   </div>
   )
 }
