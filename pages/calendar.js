@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "../components/card";
+import Wooden from "../components/wooden";
 
 function Calendar() {
   const [card, setCard] = useState(false);
@@ -21,7 +22,7 @@ function Calendar() {
   return (
   <div>
     <div className="card">
-      <Card ></Card>
+      <Wooden></Wooden>
     </div>
     
 
