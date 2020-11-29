@@ -1,24 +1,47 @@
 import { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 export default function Wooden(props) {
   const [card, setCard] = useState(false);
+  const [show, setShow] = useState(false);
+
+  function handleClose() {
+    setShow(false);
+  } 
+
+  function handleShow() {
+    setShow(true);
+  } 
 
   useEffect(() => {
     const cardValue = localStorage.getItem("card" + props.number);
       setCard(cardValue === 'true');
-      console.log(card + " - " + cardValue);
   }, []);
 
   function handleClick() {
-    console.log("clicked");
     localStorage.setItem("card" + props.number, true);
     setCard(true);
+    setShow(!show);
+    console.log("clicked : " + show);
   }
 
   function componentIfAllowed() {
     return (
-      <div className="container hole" onClick={handleClick}>
+    <div className="container hole" onClick={handleClick}>
       <div className="day">{props.number}</div>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Fermer
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       <style jsx>
         {
@@ -72,18 +95,35 @@ export default function Wooden(props) {
 
   function componentIfNotAllowed() {
     return (
-      <div className="container empty">
+      <div className="container empty" onClick={handleClick}>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Fermer
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
         <style jsx>
           {
             `
               .container {
+                cursor: pointer;
                 height: 100%;
                 width: 100%;
               }
 
               .empty {
                 background-color: #443726;
+              }
+
+              .empty:hover {
+                background-color: #5E4C35;
               }
             `
           }

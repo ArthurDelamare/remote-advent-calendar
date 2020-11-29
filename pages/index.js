@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function daysUntilChristmas(date){
   const dayOfTheYear = (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;

@@ -1,7 +1,7 @@
 import Wooden from "../components/wooden";
+import Head from "next/head";
 
 function Calendar() {
-  
 
   const boxes = [];
 
@@ -12,6 +12,15 @@ function Calendar() {
 
   return (
   <div>
+    <Head>
+      <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous"
+      />
+    </Head>
+
     <div className="container">
       <section id="boxes">
       {boxes.map((value, index) => {
@@ -19,6 +28,7 @@ function Calendar() {
       })}
     </section>
     </div>
+    
     
 
     <style jsx>
