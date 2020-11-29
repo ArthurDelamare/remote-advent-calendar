@@ -1,27 +1,12 @@
-import { useState, useEffect } from "react";
-import Card from "../components/card";
 import Wooden from "../components/wooden";
 
 function Calendar() {
-  const [card, setCard] = useState(false);
+  
 
   const boxes = [];
 
   for(let i = 1; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
-  }
-
-  useEffect(() => {
-    const cardValue = localStorage.getItem("card");
-    if (cardValue){
-      setCard(cardValue);
-      console.log(card);
-    }
-  }, []);
-
-  function handleClick() {
-    localStorage.setItem("card", true);
-    setCard(true);
   }
 
 

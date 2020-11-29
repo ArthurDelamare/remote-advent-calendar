@@ -1,8 +1,23 @@
+import { useState, useEffect } from "react";
+
 export default function Wooden(props) {
-  console.log(props.number);
-  return (
-    
-    <div className="container hole">
+  const [card, setCard] = useState(false);
+
+  useEffect(() => {
+    const cardValue = localStorage.getItem("card" + props.number);
+      setCard(cardValue === 'true');
+      console.log(card + " - " + cardValue);
+  }, []);
+
+  function handleClick() {
+    console.log("clicked");
+    localStorage.setItem("card" + props.number, true);
+    setCard(true);
+  }
+
+  function componentIfAllowed() {
+    return (
+      <div className="container hole" onClick={handleClick}>
       <div className="day">{props.number}</div>
 
       <style jsx>
@@ -52,5 +67,34 @@ export default function Wooden(props) {
         }
       </style>
     </div>
-  );
+    );
+  }
+
+  function componentIfNotAllowed() {
+    return (
+      <div className="container empty">
+
+        <style jsx>
+          {
+            `
+              .container {
+                height: 100%;
+                width: 100%;
+              }
+
+              .empty {
+                background-color: #443726;
+              }
+            `
+          }
+        </style>
+      </div>
+    );
+  }
+
+  if(card) {
+    return componentIfNotAllowed()
+  }
+
+  return componentIfAllowed();
 };
