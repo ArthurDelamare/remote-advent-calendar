@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function daysUntilChristmas(date){
   const dayOfTheYear = (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - Date.UTC(date.getFullYear(), 0, 0)) / 24 / 60 / 60 / 1000;
@@ -26,7 +27,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div id="mainwrap" className={`col-md-8 col-md-offset-2 text-center ${background}`}>
+        <div id="mainwrap" className={`col-md-offset-2 text-center ${background}`}>
           <img id="xmasimg" src="/images/rudolph-120px.png"/>
           <div id="sleeps" className="sleep-number">{daysUntilChristmas(today)}</div>
           <div id="text" className="sleep-text">Nuits avant Noël</div>
