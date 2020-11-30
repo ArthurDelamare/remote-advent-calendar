@@ -3,12 +3,27 @@ import Head from "next/head";
 
 function Calendar() {
 
-  const boxes = [];
+  const boxes = [
+    {
+      number: 1,
+      box: "box1",
+      title: "ReLIFE",
+      body: 
+      <div>
+        <img className="img-fluid m-3" src="https://cdn.myanimelist.net/images/manga/2/171573.jpg"/>
+        <p className="text-justify m-3">C'est le tout début du calendrier de l'avent, profite bien ! 
+        Pour commencer, voici un animé bien sympa : ReLIFE. C'est l'histoire d'un garçon de 27 ans et sans 
+          emploi du nom de Araka. Il enchaîne les échecs lors de ces entretiens et va rencontrer une entreprise
+          lui proposant une seconde vie, une sorte de retour en arrière en prenant un médicament qui lui donne
+          l'apparence de ses 17 ans. Ainsi, il va retourner au lycée et tenter de corriger ses erreurs.</p>
+        <a className="m-3" href="https://m.adkami.com/anime/1804" target="_blank">Clique ici pour voir l'animé.</a>
+      </div>
+    }
+  ];
 
-  for(let i = 1; i < 26; i++) {
+  for(let i = 2; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
-
 
   return (
   <div>
@@ -24,7 +39,11 @@ function Calendar() {
     <div className="container">
       <section id="boxes">
       {boxes.map((value, index) => {
-        return <div className={value.box} key={index}><Wooden number={value.number}></Wooden></div>
+        return (
+          <div className={value.box} key={index}>
+            <Wooden number={value.number} title={value.title} body={value.body}></Wooden>
+          </div>
+          )
       })}
     </section>
     </div>

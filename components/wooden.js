@@ -10,10 +10,6 @@ export default function Wooden(props) {
     setShow(false);
   } 
 
-  function handleShow() {
-    setShow(true);
-  } 
-
   useEffect(() => {
     const cardValue = localStorage.getItem("card" + props.number);
       setCard(cardValue === 'true');
@@ -26,22 +22,44 @@ export default function Wooden(props) {
     console.log("clicked : " + show);
   }
 
-  function componentIfAllowed() {
-    return (
-    <div className="container hole" onClick={handleClick}>
-      <div className="day">{props.number}</div>
+  function isAllowed() {
+    const boxDate = new Date(2020, 11, props.number);
+    const now = new Date();
 
+    return now > boxDate;
+  }
+
+  function modal() {
+
+    let title = "Ce n'est pas encore l'heure !"
+    let body = "N'essaie pas de tricher, tu sais bien que ce n'est pas le bon jour.";
+
+    if (true) {
+      title = props.title;
+      body = props.body;
+    }
+
+    return(
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Jour {props.number} - {title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>{body}</Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
             Fermer
           </Button>
         </Modal.Footer>
       </Modal>
+    );
+  }
+
+  function componentIfNotOpened() {
+    return (
+    <div className="container hole" onClick={handleClick}>
+      <div className="day">{props.number}</div>
+
+      {modal()}
 
       <style jsx>
         {
@@ -93,21 +111,11 @@ export default function Wooden(props) {
     );
   }
 
-  function componentIfNotAllowed() {
+  function componentIfAlreadyOpened() {
     return (
       <div className="container empty" onClick={handleClick}>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Fermer
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        {modal()}
 
         <style jsx>
           {
@@ -133,8 +141,8 @@ export default function Wooden(props) {
   }
 
   if(card) {
-    return componentIfNotAllowed()
+    return componentIfAlreadyOpened()
   }
 
-  return componentIfAllowed();
+  return componentIfNotOpened();
 };
