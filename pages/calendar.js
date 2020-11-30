@@ -35,13 +35,16 @@ function Calendar() {
       {
         `
         .container {
-          margin: 0 auto;
+          margin: 10px auto;
           width: 60%;
+          background-color: #DAB891;
+          padding-top: 1px;
+          padding-bottom: 1px;
         }
 
         #boxes {
           display: grid;
-          width: 83%;  
+          width: 100%;  
           margin: 2% auto;
           grid-template-columns: repeat(5, 1fr);
           grid-template-rows: repeat(7, 100px);
@@ -140,6 +143,16 @@ function Calendar() {
         }
         `
       }
+    </style>
+
+    <style jsx global>
+    {
+      `
+        body {
+          background: #2C3E50;
+        }
+      `
+    }
     </style>
   </div>
   )
