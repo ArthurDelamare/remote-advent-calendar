@@ -26,6 +26,11 @@ export default function Home() {
           />
       </Head>
 
+      <div className="calendar">
+        <Link href="/calendar">
+          <a>Calendrier</a>
+        </Link>
+      </div>
       <main>
         <div id="mainwrap" className={`col-md-offset-2 text-center ${background}`}>
           <img id="xmasimg" src="/images/rudolph-120px.png"/>
@@ -40,6 +45,17 @@ export default function Home() {
           padding-left: 15px;
           margin-right: auto;
           margin-left: auto;
+        }
+
+        .calendar {
+          position: absolute;
+          left: 2%;
+          top: 2%;
+        }
+
+        .calendar a {
+          text-decoration: underline;
+          color: white;
         }
 
         .christmas-bg {
