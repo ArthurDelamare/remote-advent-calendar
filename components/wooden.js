@@ -16,10 +16,11 @@ export default function Wooden(props) {
   }, []);
 
   function handleClick() {
-    localStorage.setItem("card" + props.number, true);
-    setCard(true);
+    if (isAllowed()) {
+      localStorage.setItem("card" + props.number, true);
+      setCard(true);
+    }
     setShow(!show);
-    console.log("clicked : " + show);
   }
 
   function isAllowed() {
@@ -34,7 +35,7 @@ export default function Wooden(props) {
     let title = "Ce n'est pas encore l'heure !"
     let body = "N'essaie pas de tricher, tu sais bien que ce n'est pas le bon jour.";
 
-    if (true) {
+    if (isAllowed()) {
       title = props.title;
       body = props.body;
     }
