@@ -22,10 +22,27 @@ function Calendar() {
           l'apparence de ses 17 ans. Ainsi, il va retourner au lycée et tenter de corriger ses erreurs.</p>
         <a className="m-3" href="https://m.adkami.com/anime/1804" target="_blank">Clique ici pour voir l'animé.</a>
       </div>
+    },
+    {
+      number: 2,
+      box: "box2",
+      title: "Toradora",
+      body:
+      <div>
+        <img className="img-fluid m-3" src="https://cdn.myanimelist.net/images/anime/13/22128.jpg"/>
+        <p className="text-justify m-3">Pour le deuxième jour, un deuxième animé ! Ryuuji est un élève japonais qui vient 
+          d'entrer en terminale et il a un problème majeur : ses yeux intimidants. A cause de ça, il a
+          beaucoup de mal à se faire des amis et encore plus à se trouver une petite amie (et il est même pris
+          pour un délinquant)... Je ne peux pas trop te dévoiler l'histoire au risque de te spoil mais, il s'en suit un développement 
+          intéressant avec plusieurs personnages et la situation de Ryuuji va évoluer au fil du temps. 
+          L'animé est axé romance et tranche de vie, parfait pour se détendre après les cours. 
+          Rien qu'en y pensant, je pense le regarder à nouveau !</p>
+          <a className="m-3" href="https://m.adkami.com/anime/587" target="_blank">Clique ici pour voir l'animé.</a>
+      </div>
     }
   ];
 
-  for(let i = 2; i < 26; i++) {
+  for(let i = 3; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
