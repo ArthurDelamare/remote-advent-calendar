@@ -85,7 +85,7 @@ function Calendar() {
         Elle symbolise une philosophie de vie qui est nécessaire si nous ne voulons pas nous morfondre continuellement sur
         nos problèmes. L'important est de trouver une solution, de parler, de s'exprimer d'une quelconque façon et d'arriver à progresser.
         Il faut toujours aller de l'avant !</p>
-        <p>Bonne journée et bon week-end !</p>
+        <p className="text-justify m-3">Bonne journée et bon week-end !</p>
       </div>
     }
   ];
