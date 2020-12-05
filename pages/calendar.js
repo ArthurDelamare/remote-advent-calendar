@@ -73,10 +73,24 @@ function Calendar() {
         Super bonne journée à toi, je t'adore !</p>
           <a className="m-3" href="https://www.webtoons.com/fr/fantasy/mage-and-demon-queen/list?title_no=1827" target="_blank">Clique ici pour voir le Webtoon.</a>
       </div>
+    },
+    {
+      number: 5,
+      box: "box5",
+      title: "Citation",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://i.pinimg.com/736x/88/20/6d/88206d67c4659be098117d09791d88f1.jpg"/>
+        <p className="text-justify m-3">Jour numéro 5, c'est l'heure d'une citation que moi aussi, j'aime beaucoup.
+        Elle symbolise une philosophie de vie qui est nécessaire si nous ne voulons pas nous morfondre continuellement sur
+        nos problèmes. L'important est de trouver une solution, de parler, de s'exprimer d'une quelconque façon et d'arriver à progresser.
+        Il faut toujours aller de l'avant !</p>
+        <p>Bonne journée et bon week-end !</p>
+      </div>
     }
   ];
 
-  for(let i = 5; i < 26; i++) {
+  for(let i = 6; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
