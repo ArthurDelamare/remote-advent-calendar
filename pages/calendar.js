@@ -100,10 +100,24 @@ function Calendar() {
         Je ne vais pas te présenter l'animé car tu le connais déjà bien. Voilà voilà, j'ai trop hâte de le regarder !</p>
         <a className="m-3" href="https://www.youtube.com/watch?v=KnpVhlDoogM" target="_blank">Clique ici pour voir le trailer.</a>
       </div>
+    },
+    {
+      number: 7,
+      box: "box7",
+      title: "L'exoconférence",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://global-img.gamergen.com/l-attaque-des-titans-shingeki-no-kyojin-final-season-key-art_0000963504.jpg"/>
+        <p className="text-justify m-3">Pour ce septième jour, je te présente l'Exoconférence d'Alexandre Astier.
+        C'est une pièce de théâte moderne sur le thème de la science, il y a beaucoup d'humour et c'est super bien joué !!!
+        Franchement, j'adore la regarder au moins une fois par an et je me régale à chaque fois. C'est fait par l'acteur principal
+        de Kaamelott mais tu n'as sûrement jamais regarder cette série non plus. Bon visionnage !</p>
+        <a className="m-3" href="https://wwv.streamcomplet.nu/films/alexandre-astier-lexoconference" target="_blank">Clique ici pour voir l'Exoconférence.</a>
+      </div>
     }
   ];
 
-  for(let i = 7; i < 26; i++) {
+  for(let i = 8; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
