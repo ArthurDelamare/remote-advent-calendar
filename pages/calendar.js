@@ -128,6 +128,19 @@ function Calendar() {
         Disponible sur Netflix, que demande le peuple ?</p>
         <a className="m-3" href="https://www.netflix.com/title/80013274" target="_blank">Clique ici pour voir le film.</a>
       </div>
+    },
+    {
+      number: 9,
+      box: "box9",
+      title: "Fall Guys, 1/2",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://s1.gaming-cdn.com/images/products/7281/orig/fall-guys-ultimate-knockout-cover.jpg"/>
+        <p className="text-justify m-3">Première partie d'un gros cadeau dans le calendrier de l'avent ! Cette case te donne
+        un premier jeton pour avoir le jeu "Fall Guys". Il faut deux jetons pour obtenir le code d'accès au jeu (le deuxième jeton arrivera
+        dans les prochains jours). Si tu ne connais pas le jeu, c'est un jeu super sympa que tu vas adorer : un mélange de parcours et
+        de Battle Royal. Je te laisse regarder quelques vidéos sur YouTube pour en savoir un peu plus. Bonne journée !!!</p>
+      </div>
     }
   ];
 
