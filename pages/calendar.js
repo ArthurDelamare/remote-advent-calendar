@@ -14,7 +14,7 @@ function Calendar() {
       title: "ReLIFE",
       body: 
       <div>
-        <img className="img-fluid m-3" src="https://cdn.myanimelist.net/images/manga/2/171573.jpg"/>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://www.nautiljon.com/images/anime/00/08/relife_kanketsu-hen_6880.jpg"/>
         <p className="text-justify m-3">C'est le tout début du calendrier de l'avent, profite bien ! 
         Pour commencer, voici un animé bien sympa : ReLIFE. C'est l'histoire d'un garçon de 27 ans et sans 
           emploi du nom de Araka. Il enchaîne les échecs lors de ces entretiens et va rencontrer une entreprise
@@ -29,7 +29,7 @@ function Calendar() {
       title: "Toradora",
       body:
       <div>
-        <img className="img-fluid m-3" src="https://cdn.myanimelist.net/images/anime/13/22128.jpg"/>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://www.manga-news.com/public/images/dvd/Toradora-anime.jpg"/>
         <p className="text-justify m-3">Pour le deuxième jour, un deuxième animé ! Ryuuji est un élève japonais qui vient 
           d'entrer en terminale et il a un problème majeur : ses yeux intimidants. A cause de ça, il a
           beaucoup de mal à se faire des amis et encore plus à se trouver une petite amie (et il est même pris
