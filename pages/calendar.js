@@ -141,10 +141,24 @@ function Calendar() {
         dans les prochains jours). Si tu ne connais pas le jeu, c'est un jeu super sympa que tu vas adorer : un mélange de parcours et
         de Battle Royal. Je te laisse regarder quelques vidéos sur YouTube pour en savoir un peu plus. Bonne journée !!!</p>
       </div>
+    },
+    {
+      number: 10,
+      box: "box10",
+      title: "Epic music",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://i1.sndcdn.com/artworks-000490273053-rhassk-t500x500.jpg"/>
+        <p className="text-justify m-3">Aujourd'hui, un condensé de musiques épiques pour se donner un giga boost de motivation.
+        La vidéo date un peu mais c'est encore la meilleure à ce jour : musique épique et cinématique du début à la fin. Enjoy !</p>
+        <a className="m-3" href="https://www.youtube.com/watch?v=WU7SGn0MeP0" target="_blank">Clique ici pour écouter la musique et voir les cinématiques.</a>
+      </div>
     }
   ];
 
-  for(let i = 9; i < 26; i++) {
+  // https://www.youtube.com/watch?v=WU7SGn0MeP0
+
+  for(let i = 11; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
