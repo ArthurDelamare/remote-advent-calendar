@@ -180,9 +180,21 @@ function Calendar() {
         <a className="m-3" href="https://www.adkami.com/anime/34/1/1/2/1/" target="_blank">Clique ici voir l'animé.</a>
       </div>
     },
+    {
+      number: 13,
+      box: "box13",
+      title: "Adore",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://images-na.ssl-images-amazon.com/images/I/71%2BdR5NMGaL._SL1425_.jpg"/>
+        <p className="text-justify m-3">Aujourd'hui, une musique d'une artiste que j'apprécie : Adore de Jasmine Thompson. C'est doux
+        et entrainant, tu m'en diras des nouvelles ! PS : je te conseille d'écouter d'autres de ses musiques, elles sont superbes.</p>
+        <a className="m-3" href="https://www.youtube.com/watch?v=fyG9La0PAsM" target="_blank">Clique ici pour écouter la musique.</a>
+      </div>
+    },
   ];
 
-  for(let i = 13; i < 26; i++) {
+  for(let i = 14; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
