@@ -166,10 +166,23 @@ function Calendar() {
         te recommander d'autres de ses chansons si tu aimes. Bonne journée !</p>
         <a className="m-3" href="https://www.youtube.com/watch?v=w79qlLPsaPk&list=LL&index=36" target="_blank">Clique ici pour écouter la musique.</a>
       </div>
-    }
+    },
+    {
+      number: 12,
+      box: "box12",
+      title: "Hunter x Hunter",
+      body:
+      <div>
+        <img className="img-fluid m-3" style={{ maxWidth: "-webkit-fill-available" }} src="https://fr.web.img5.acsta.net/pictures/19/08/01/09/52/4803203.jpg"/>
+        <p className="text-justify m-3">Moins populaire mais non moins bon, je te présente l'animé Hunter x Hunter. C'est un shonen possédant
+        un mélange d'aventure, de combats et d'amitiés (le trio gagnant). Du même style que Naruto ou One Piece, l'animé
+        est excellent ! De plus, il y a moins d'épisodes que les deux animés precedemment cités, tu peux donc courir le regarder :D</p>
+        <a className="m-3" href="https://www.adkami.com/anime/34/1/1/2/1/" target="_blank">Clique ici voir l'animé.</a>
+      </div>
+    },
   ];
 
-  for(let i = 12; i < 26; i++) {
+  for(let i = 13; i < 26; i++) {
     boxes.push({number: i, box: `box${i}`});
   }
 
